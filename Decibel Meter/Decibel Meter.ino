@@ -33,10 +33,10 @@ int dBPinNum = 5;
 float decibel = 0;
 
 String smsGPSInfo;
-String soundString = smsGPSInfo + "konumundaki ses seviyesi";
+String soundString = "Sound level at" + smsGPSInfo ;
 String stringOne = soundString + decibel;
-String warningSMSstr = stringOne + "dB. Kabul edilebilir değerin üstünde.";
-String standardSMSstr = stringOne + "dB. Kabul edilebilir değer aralığında.";
+String warningSMSstr = stringOne + "dB. Out of the acceptable range.";
+String standardSMSstr = stringOne + "dB. Within the acceptable range.";
 String phoneNumber = "05058233362";
 
 void setup() 
