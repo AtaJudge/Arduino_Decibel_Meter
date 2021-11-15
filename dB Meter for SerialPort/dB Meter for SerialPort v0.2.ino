@@ -6,7 +6,7 @@
 int Ref_dB_arv;
 
 String warningstr="dB. Out of the acceptable range.";
-String standartstr="dB. Within the acceptable range.";
+String standardstr="dB. Within the acceptable range.";
 
 void setup()
 {
@@ -24,7 +24,7 @@ void loop()
   }
   else if(dBval<=70)
   {
-    Serial.println(dBval+standartstr);
+    Serial.println(dBval+standardstr);
     digitalWrite(led, LOW);
   }
 }
