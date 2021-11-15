@@ -4,8 +4,8 @@
 #define dBPinNum 0
 float decibel = 0;
 
-String warningstr =   "dB. Kabul edilebilir değerin üstünde.";
-String standardstr =  "dB. Kabul edilebilir değer aralığında.";
+String warningstr="dB. Out of the acceptable range.";
+String standardstr="dB. Within the acceptable range.";
 
 void setup()
 {
