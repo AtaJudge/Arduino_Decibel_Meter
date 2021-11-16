@@ -1,7 +1,7 @@
 /*
 MIT License
 
-Copyright (c) 2021 Ata Berke YARGIÇ (AtaJudge)
+Copyright (c) 2021 Ata Berke YARGIÇ
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -22,12 +22,11 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-#define led 3
-#define maxAmp 512
-#define dBPinNum 0
-#define X 80
+#define led 3 //LED connection pin.
+#define dBPinNum 0 //Mic connection pin.
+#define X 80 //Reference dB value. (Change it by your own reference)
 
-int Ref_dB_arv;
+float Ref_dB_arv;//X.0 dB
 
 String warningstr="dB. Out of the acceptable range.";
 String standardstr="dB. Within the acceptable range.";
@@ -60,7 +59,7 @@ float DecibelMeter()
 
   ARV=analogRead(dBPinNum);
   decibel=(ARV/Ref_dB_arv);
-  double dB = 20*(log10(decibel))+X; //Replace X with your referance dB value.
+  double dB = 20*(log10(decibel))+X;
   return dB;
 }
 
